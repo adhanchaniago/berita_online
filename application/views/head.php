@@ -1,5 +1,5 @@
 <?php 
-    if($this->session->userdata('username') != NULL){
+ //   if($this->session->userdata('username') != NULL){
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -267,8 +267,8 @@
     </div>
 
 <?php 
-    }
-    else redirect(base_url('login'));
+  //  }
+  //  else redirect(base_url('login'));
 
     
- ?>
+?>
