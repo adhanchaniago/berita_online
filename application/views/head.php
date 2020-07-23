@@ -1,5 +1,5 @@
 <?php 
- //   if($this->session->userdata('username') != NULL){
+    if($this->session->userdata('username') != NULL){
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -129,9 +129,11 @@
                 <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
                     <div class="header-right-info">
                         <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                            
-                            <li class="nav-item"><a href="<?php echo base_url(); ?>horizontal/#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                        <li>
+                        <a  href="<?php echo base_url(); ?>login/logout"><button type='button' class='btn btn-custon-four btn-danger' class="admin-name" >LOGIN</button></a> </li>
+                     <!--       <li class="nav-item" ><span class="admin-name">LOGIN</span><a href="<?php echo base_url(); ?>horizontal/#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"></i><span class="indicator-nt"></span> </a>
                                 <div role="menu" class="notification-author dropdown-menu animated flipInX">
+                               
                                     <div class="notification-single-top">
                                         <h1>Notifications</h1>
                                     </div>
@@ -189,7 +191,7 @@
                                         <a href="<?php echo base_url(); ?>horizontal/#">View All Notification</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                             <li class="nav-item">
                                 <a href="<?php echo base_url(); ?>horizontal/#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                     <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
@@ -267,8 +269,8 @@
     </div>
 
 <?php 
-  //  }
-  //  else redirect(base_url('login'));
+    }
+    else redirect(base_url('login'));
 
     
 ?>
