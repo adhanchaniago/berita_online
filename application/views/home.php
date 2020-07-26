@@ -130,7 +130,7 @@
                     <div class="header-right-info">
                         <ul class="nav navbar-nav mai-top-nav header-right-menu">
                         <li>
-                        <a  href="<?php echo base_url(); ?>login/logout"><button type='button' class='btn btn-custon-four btn-danger' class="admin-name" >SIGN</button></a> </li>
+                        <a  href="<?php echo base_url(); ?>login/sign"><button type='button' class='btn btn-custon-four btn-danger' class="admin-name" >SIGN</button></a> </li>
                     
                           
                         </ul>
@@ -165,7 +165,7 @@
                     <div class="breadcome-list shadow-reset">
                         <div class="breadcome-heading">
                             <p><strong>Filter:</strong>
-                            <button type="button" class="btn btn-custon-four btn-danger" onclick="location.href='<?php echo base_url();?>welcome/desc'">JUMLAH BACA</button>/*jumlah pembaca terbanyak-terkecil*/</p>
+                            <button type="button" class="btn btn-custon-four btn-danger" onclick="location.href='<?php echo base_url();?>home/desc'">JUMLAH BACA</button>/*jumlah pembaca terbanyak-terkecil*/</p>
 
 
                             <p></p>
@@ -204,7 +204,7 @@
                                                 <td><b>====================================================</br><center>admin : ".$row->nama."</center></b><b><h2><strong></br>".$row->judul_berita."</strong></h2>".$t."".$row->jml_baca."".$v."".$u."</br></b>
                                                 <br>".$cut."
                                                 ".$s."</br>
-                                                <a  href='".base_url('welcome/selanjutnya?id='.$row->id)."'><button type='button' class='btn btn-custon-four btn-danger' >LANJUT BACA</button></a> 
+                                                <a  href='".base_url('home/selanjutnya?id='.$row->id)."'><button type='button' class='btn btn-custon-four btn-danger' >LANJUT BACA</button></a> 
                                                 </td>  
                                                 <strong>".$w."</strong>
                                                 </tr>";  
@@ -231,5 +231,5 @@
     </div>
     <p></p>
     <p></p>
-    </div>
+    </div>-->
     

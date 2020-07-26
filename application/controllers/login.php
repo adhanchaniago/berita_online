@@ -39,6 +39,10 @@ class login extends CI_Controller {
 
 	function logout(){
 		$this->session->sess_destroy();
+		redirect(base_url('home'));
+	}
+	function sign(){
+		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}
 }

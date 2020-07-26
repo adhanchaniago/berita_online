@@ -1,5 +1,5 @@
 <?php
-class M_berita extends CI_Model{
+class M_home extends CI_Model{
 	
 	//fungsi untuk tampil data pada home
 	function tampil_home(){
