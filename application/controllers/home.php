@@ -5,23 +5,26 @@ class home extends CI_Controller {
   function __construct(){
 		parent::__construct();
 		$this->load->model('m_berita');
-		$this->load->model('m_home');
+		$this->load->helper('url');
+		
 		
 	}
 
 
 
 	public function index() {
-		$data['query'] = $this->m_home->tampil_home();
+		$data['query'] = $this->m_berita->tampil_home();
 		$this->load->view('home', $data);
+		$this->load->view('home/beranda2', $data);
 		$this->load->view('footer', $data);
     
 	}
 
 	public function desc() {
-		$data['query'] = $this->m_home->tampil_desc2();
+		$data['query'] = $this->m_berita->tampil_desc();
 	//	$data['query'] = $this->m_berita->tampil_login();
 		$this->load->view('home', $data);
+		$this->load->view('home/beranda2', $data);
 		$this->load->view('footer', $data);
 
 	}
@@ -32,7 +35,10 @@ class home extends CI_Controller {
 		$data['data'] = $this->m_berita->jumlah_baca($data['id']);
 		
 		$this->load->view('home', $data);
+		$this->load->view('LanjutBaca', $data);
 		$this->load->view('footer', $data);
 	}
+
+	
 }
 ?>

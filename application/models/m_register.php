@@ -16,7 +16,7 @@ class M_register extends CI_Model{
 			'email' => $this->input->post('email'),
 			'password' => md5($this->input->post('password')),
 			'confirm_password' => $this->input->post('confirm_password'),
-			 
+			'level' => $this->input->post('level'),
 			 
 		); 
 		$this->db->insert('login', $data);

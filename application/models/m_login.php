@@ -10,12 +10,16 @@
 		return $this->db->get('login');
 	}
 
-	
+	function tampil_home(){
+		return $this->db->get('login');   //mengambil data dari database
+	} 
 
 	function tambah_data(){
 		$data = array(
 			
+			'nama' => $this->input->post('nama'),
 			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email'),
 			'password' => md5($this->input->post('password')),
 			'level' => $this->input->post('level'),
 			
@@ -26,8 +30,9 @@
 
 	function ubah_data ($idLogin){
 		$data = array(
-			
+			'nama' => $this->input->post('nama'),
 			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email'),
 			'password' => md5($this->input->post('password')),
 			'level' => $this->input->post('level'),
 			

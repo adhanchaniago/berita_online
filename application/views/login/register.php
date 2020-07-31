@@ -136,13 +136,29 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="login-input-head">
-                                        <p>Confarm Password</p>
+                                        <p>Confirm Password</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="login-input-area">
                                         <input type="password" name="confirm_password" />
                                         <i class="fa fa-lock login-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Level</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                    <select  type="text" class="form-control" name="level" >
+                                <option>SuperAdmin</option>
+                                <option>Admin</option>
+                            </select>
                                     </div>
                                 </div>
                             </div>

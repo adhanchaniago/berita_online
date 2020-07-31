@@ -1,124 +1,4 @@
 
-    
-    <div class="inbox-mailbox-area mg-b-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        
-                        <div class="col-lg-12">
-                            <div class="tab-content">
-                                
-                                <div id="composemail" class="tab-pane fade in animated zoomInDown shadow-reset custom-inbox-message active">
-                                    <div class="view-mail-wrap">
-                                        <div class="mail-title">
-                                            <h2>Tambah Berita</h2>
-                                            <div class="view-mail-action">
-                                            
-                                            </div>
-                                        </div>
-                                        <P></P>
-                                        <!--kode untuk create database table berita--> 
-                                        <form  method="post" action="<?php echo base_url(). 'tambahBerita/add'; ?>" name="frmBerita" enctype="multipart/form-data">  
-
-                                                        
-                                    <!--ini        <div >
-                                                <label  >Kategori</label>  
-                                                <div class="form-select-list">
-                                                                <select class="form-control custom-select-value" id="id" name="id">
-                                                               <?php
-                                                                     $query = $this->m_kategori->tampil_home();
-                                                                     foreach($query->result() as $row) {
-                                                                    echo "<option value='".$row->id."'>".$row->judul_berita."</option>";
-                                                                     }
-                                                                  ?>
-                                                                </select>
-                                                            </div>-->
-                                            <div >  
-                                                <input type="hidden" id="id" name="id">
-                                                <label  for="inputJudul">Judul</label>  
-                                                <div >  
-                                                    <input class="form-control"  type="text"  placeholder="Judul Berita" name="judul_berita" id="judul_berita" required >  
-                                                </div>  
-                                            </div>  
-                                            <div >  
-                                                <label  for="inputIsiBerita">Isi Berita</label>  
-                                                <div >  
-                                                    <textarea class="form-control" rows="10" cols="150" class="span12" name="isi_berita" id="isi_berita" required></textarea>  
-                                                </div>  
-                                            </div>  
-                                            <div >  
-                                                <div >  
-                                                    <button type="submit" class="btn btn-primary">TAMBAH BERITA</button>  
-                                                </div>  
-                                            </div>  
-                                        </form>  
-
-
-
-
-
-                                      
-                                       <!-- <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="row">
-                                                    <div class="col-lg-2">
-                                                        <div method="post" action="<?php echo base_url(). 'berita/add'; ?>" name="frmBerita"  class="compose-email-to compose-subject-title">
-                                                            <input type="hidden" id="id" name="id">
-                                                            <span  for="inputJudul">Judul</span>  
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-10">
-                                                        <div class="compose-multiple-email compose-subject-email">
-                                                            <input type="text" placeholder="Judul Berita" name="judul_berita" id="judul_berita" required />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-editor-compose">
-                                                    <span  for="inputIsiBerita">Isi Berita</span>
-                                                    <div id="summernote5">
-                                                        <div class="note-editable panel-body" contenteditable="true" style="height: 400px;" name="isi_berita" id="isi_berita">
-                                                            
-                                                           
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="view-mail-reply-list">
-                                                    <ul class="view-mail-forword">
-                                                        <button type="submit" class="btn btn-primary">TAMBAH BERITA</button> 
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
-                                
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
 <!--batas bagian posting berita-->
 
 
@@ -154,8 +34,11 @@
                                     <thead>
                                         <tr>
                                             <th >No</th>
-                                            <th data-field="name" data-editable="true">Nama Judul</th>
-                                            <th data-field="name" data-editable="true">Isi Berita</th>
+                                            <th data-field="name" data-editable="true">Nama</th>
+                                            <th data-field="name" data-editable="true">Username</th>
+                                            <th data-field="name" data-editable="true">Email</th>
+                                            <th data-field="name" data-editable="true">Password</th>
+                                            <th data-field="name" data-editable="true">Level</th>
                                             <th >Aksi</th>
                                             
                                         </tr>
@@ -163,12 +46,15 @@
                                      <tbody>
                                 <?php 
                                     $no = 1;
-                                    $query=$this->m_berita->tampil_home();
+                                    $query=$this->m_login->tampil_home();
                                     foreach($query->result() as $row){
                                 echo "<tr>
                                 <td>".$no."</td>
-                                <td>".$row->judul_berita."</td>
-                                <td>".$row->isi_berita."</td>
+                                <td>".$row->nama."</td>
+                                <td>".$row->username."</td>
+                                <td>".$row->email."</td>
+                                <td>".$row->password."</td>
+                                <td>".$row->level."</td>
                                 <td>
                                     <a href ='#' class ='on-default edit-row btn btn-primary' data-toggle='modal' data-target='#custom-width-modal' onClick=\"SetInput('".$row->id."','".$row->judul_berita."','".$row->isi_berita."')\"><i class ='fa fa-pencil'></i> Edit </a>
                                     <a href ='#' class ='on-default remove-row btn btn-danger' data-toggle='modal' data-target='#delete-modal'onClick=\"SetInputs('".$row->id."','".$row->judul_berita."','".$row->isi_berita."')\"><i class ='fa fa-trash'></i> Hapus </a>
@@ -280,21 +166,3 @@
         </div>
     </div>
     <!-- Static Table End -->
-
-
-    <script type="text/javascript">
-    function SetInput(id, judul_berita,isi_berita){
-        document.getElementById('id').value = id;
-        document.getElementById('judul_berita').value = judul_berita;
-        document.getElementById('isi_berita').value = isi_berita;
-        
-    }
-    function SetInputs(id, judul_berita,isi_berita){
-        
-        document.getElementById('id2').value = id;
-        document.getElementById('judul_berita2').value = judul_berita;
-        document.getElementById('isi_berita2').value = isi_berita;
-    }
-
-   
-</script>

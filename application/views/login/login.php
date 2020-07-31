@@ -103,9 +103,7 @@
 
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="forgot-password">
-                                                <a href="<?php echo base_url(); ?>horizontal/#">Forgot password?</a>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                    

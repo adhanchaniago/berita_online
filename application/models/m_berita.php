@@ -61,7 +61,7 @@ class M_berita extends CI_Model{
 	function hapus_data($id){
 		$this->db->where(array('id'=> $id));
 		$this->db->delete('berita');
-		redirect('../tambahBerita');
+		redirect('../readBerita');
 	}
 
 	function ubah_data ($id){
@@ -75,7 +75,7 @@ class M_berita extends CI_Model{
 		   );
 			$this->db->where(array('id'=> $id));
 			$this->db->update('berita',$data);
-			redirect('../tambahBerita');
+			redirect('../readBerita');
 	}
 	
 }

@@ -225,7 +225,8 @@
                 <div class="col-lg-12">
                     <h2>BERITA ONLINE</h2>
                     <ul class="nav nav-tabs custom-menu-wrap">
-                        <li  ><a  href="<?php echo base_url(); ?>welcome/index" >Home</a></li>
+                        <li  ><a  href="<?php echo base_url(); ?>welcome/index" id="home">Home</a></li>
+                        <li  ><a  href="<?php echo base_url(); ?>pengguna/index" id="kP">Kelola data pengguna</a></li>
                      <!--  <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Kategori<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                         <div role="menu" class="dropdown-menu animated flipInX"><?php
                                                     $query = $this->m_kategori->tampil_home();
@@ -237,10 +238,11 @@
                                      ?>
                                  </div>
                         </li>-->
-                       <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Tambah Berita<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                       <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"id="kB">Kelola Berita<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                             <div role="menu" class="dropdown-menu animated flipInX">
                              <!--      <a href="<?php echo base_url(); ?>tambahKategori/index" class="dropdown-item">TambahKategori</a>--> 
-                                    <a href="<?php echo base_url(); ?>tambahBerita/index" class="dropdown-item">Tambah Berita</a>
+                                    <a href="<?php echo base_url(); ?>tambahBerita/index" class="dropdown-item">Create Berita</a>
+                                    <a href="<?php echo base_url(); ?>readBerita/index" class="dropdown-item">Read Berita</a>
                                     
                                 </div>
                         </li>
@@ -262,7 +264,14 @@
 
 <?php 
     }
-    else redirect(base_url('login'));
+   else redirect(base_url('login'));
 
+
+   if($this->session->userdata('level') == "Admin"){
+    echo"<script>
+    document.getElementById('kP').style.display = 'none';
+    
+    </script>";
+}
     
 ?>
