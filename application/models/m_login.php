@@ -19,8 +19,9 @@
 			
 			'nama' => $this->input->post('nama'),
 			'username' => $this->input->post('username'),
-			'email' => $this->input->post('email'),
+			
 			'password' => md5($this->input->post('password')),
+			
 			'level' => $this->input->post('level'),
 			
 		);
@@ -32,7 +33,7 @@
 		$data = array(
 			'nama' => $this->input->post('nama'),
 			'username' => $this->input->post('username'),
-			'email' => $this->input->post('email'),
+			
 			'password' => md5($this->input->post('password')),
 			'level' => $this->input->post('level'),
 			

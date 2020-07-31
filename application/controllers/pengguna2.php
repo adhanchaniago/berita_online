@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pengguna extends CI_Controller {
+class pengguna2 extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('m_login');
@@ -10,13 +10,7 @@ class pengguna extends CI_Controller {
 	}
 	
 
-	public function index(){
-		$data['query'] = $this->m_login->tampil_home();
-		$this->load->view('head', $data   );  
-		  $this->load->view('login/pengguna', $data);
-        $this->load->view('footer', $data);
-	}
-	public function index2(){
+		public function index(){
 		$data['query'] = $this->m_login->tampil_home();
 		$this->load->view('head', $data   );  
 		  $this->load->view('kelolaPengguna/readPengguna', $data);

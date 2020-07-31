@@ -13,14 +13,50 @@ class M_register extends CI_Model{
 		$data = array(
 			'nama' => $this->input->post('nama'),
 			'username' => $this->input->post('username'),
-			'email' => $this->input->post('email'),
+			
 			'password' => md5($this->input->post('password')),
-			'confirm_password' => $this->input->post('confirm_password'),
+			 
 			'level' => $this->input->post('level'),
 			 
 		); 
 		$this->db->insert('login', $data);
 		redirect('../register');
+	}
+
+	function tambah_pengguna(){
+		$data = array(
+			'nama' => $this->input->post('nama'),
+			'username' => $this->input->post('username'),
+			
+			'password' => md5($this->input->post('password')),
+			  
+			'level' => $this->input->post('level'),
+			 
+		); 
+		$this->db->insert('login', $data);
+		redirect('../pengguna');
+	}
+
+	function hapus_data($idLogin){
+		$this->db->where(array('idLogin'=> $idLogin));
+		$this->db->delete('login');
+		redirect('../pengguna2');
+	}
+
+	function ubah_data ($idLogin){
+		$data = array(
+			'nama' => $this->input->post('nama'),
+			'username' => $this->input->post('username'),
+			
+			'password' => md5($this->input->post('password')),
+			  
+			'level' => $this->input->post('level'),
+			
+			
+		   );
+			$this->db->where(array('idLogin'=> $idLogin));
+			$this->db->update('login',$data);
+			redirect('../pengguna2');
 	}
 
 	

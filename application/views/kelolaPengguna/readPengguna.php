@@ -30,15 +30,16 @@
                                         <option value="selected">Export Selected</option>
                                     </select>
                                 </div>
-                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                <table id="table" data-toggle="table"  data-show-columns="true"   data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
+                                          
                                             <th >No</th>
-                                            <th data-field="name" data-editable="true">Nama</th>
-                                            <th data-field="name" data-editable="true">Username</th>
-                                            <th data-field="name" data-editable="true">Email</th>
-                                            <th data-field="name" data-editable="true">Password</th>
-                                            <th data-field="name" data-editable="true">Level</th>
+                                            <th >Nama </th>
+                                            <th >Username </th>
+                                            <th >Password</th>
+                                          
+                                            <th >Level</th>
                                             <th >Aksi</th>
                                             
                                         </tr>
@@ -46,22 +47,19 @@
                                      <tbody>
                                 <?php 
                                     $no = 1;
-                                    $query=$this->m_login->tampil_home();
                                     foreach($query->result() as $row){
                                 echo "<tr>
+                                
                                 <td>".$no."</td>
                                 <td>".$row->nama."</td>
                                 <td>".$row->username."</td>
-                                <td>".$row->email."</td>
+                                
                                 <td>".$row->password."</td>
                                 <td>".$row->level."</td>
-                                <td>
-                                    <a href ='#' class ='on-default edit-row btn btn-primary' data-toggle='modal' data-target='#custom-width-modal' onClick=\"SetInput('".$row->id."','".$row->judul_berita."','".$row->isi_berita."')\"><i class ='fa fa-pencil'></i> Edit </a>
-                                    <a href ='#' class ='on-default remove-row btn btn-danger' data-toggle='modal' data-target='#delete-modal'onClick=\"SetInputs('".$row->id."','".$row->judul_berita."','".$row->isi_berita."')\"><i class ='fa fa-trash'></i> Hapus </a>
-                                    
-
-
-                                </td>
+                                <td><a href ='#' class ='on-default edit-row btn btn-primary' data-toggle='modal' data-target='#custom-width-modal' onClick=\"SetInput('".$row->idLogin."','".$row->nama."','".$row->username."','".$row->password."','".$row->level."')\"><i class ='fa fa-pencil'></i> Edit </a>
+                                <a href ='#' class ='on-default remove-row btn btn-danger' data-toggle='modal' data-target='#delete-modal'onClick=\"SetInputs('".$row->idLogin."','".$row->nama."','".$row->username."','".$row->password."','".$row->level."')\"><i class ='fa fa-trash'></i> Hapus </a>
+                             </td>
+                               
                             
                                 
                             </tr>";
@@ -80,68 +78,120 @@
                      <!-- end row -->
 
 <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog" style="width:55%;">
+    <div class="modal-dialog" style="width:60%;">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="custom-width-modalLabel">Kategori</h4>
-            </div>
-        <form  method="post" action="<?php echo base_url(). 'tambahBerita/add'; ?>" name="frmBerita" enctype="multipart/form-data">  
-
-                                                        
-                                    <!--ini        <div >
-                                                <label  >Kategori</label>  
-                                                <div class="form-select-list">
-                                                                <select class="form-control custom-select-value" id="id" name="id">
-                                                               <?php
-                                                                     $query = $this->m_kategori->tampil_home();
-                                                                     foreach($query->result() as $row) {
-                                                                    echo "<option value='".$row->id."'>".$row->judul_berita."</option>";
-                                                                     }
-                                                                  ?>
-                                                                </select>
-                                                            </div>-->
-                                            <div >  
-                                                <input type="hidden" id="id" name="id">
-                                                <label  for="inputJudul">Judul</label>  
-                                                <div >  
-                                                    <input class="form-control"  type="text"  placeholder="Judul Berita" name="judul_berita" id="judul_berita" required >  
-                                                </div>  
-                                            </div>  
-                                            <div >  
-                                                <label  for="inputIsiBerita">Isi Berita</label>  
-                                                <div >  
-                                                    <textarea class="form-control" rows="10" cols="150" class="span12" name="isi_berita" id="isi_berita" required></textarea>  
-                                                </div>  
-                                            </div>  
-                                            <div >  
-                                                <div >  
-                                                    <button type="submit" class="btn btn-primary">TAMBAH BERITA</button>  
-                                                </div>  
-                                            </div>  
-                                        
-            <div class="modal-footer">
+            
+        <form  method="post" action="<?php echo base_url(). 'pengguna/add'; ?>" name="frmBerita" enctype="multipart/form-data">  
+        <input type="hidden" id="idLogin" name="idLogin">
+        <div class="col-lg-6">
+                        <div class="login-bg">
+                            <div class="row">
+                                <div class="col-lg-12">
+                               <!--     <div class="logo">
+                                        <a href="<?php echo base_url(); ?>horizontal/#"><img src="<?php echo base_url(); ?>horizontal/img/logo/logo.png" alt="" />
+                                        </a>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="login-title">
+                                        <center><h1>Registration Form</h1></center>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                       <p>Full Name</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="text" name="nama"  id="nama" />
+                                        <i class="fa fa-user login-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Username</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="text" name="username" id="username"/>
+                                        <i class="fa fa-user login-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Password</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="password" name="password" id="password"/>
+                                        <i class="fa fa-lock login-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Level</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                    <select  type="text" class="form-control" name="level" >
+                                <option>SuperAdmin</option>
+                                <option>Admin</option>
+                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="row">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-8">
+                                <div class="modal-footer">
                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary waves-effect waves-light">Simpan</button>
             </div>
-        </form>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
 
 
-<div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+
+
+
+    <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
                                             <div class="modal-dialog" style="width:55%;">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                         <h4 class="modal-title" id="custom-width-modalLabel">Konfirmasi Hapus</h4>
                                                     </div>
-                                                    <form action="<?php echo base_url(). 'tambahBerita/delete'; ?>" method="post" class="form-horizontal" role="form">
+                                                    <form action="<?php echo base_url(). 'pengguna/delete'; ?>" method="post" class="form-horizontal" role="form">
                                                     <div class="modal-body">
                                                         <p>Apakah anda yakin ingin menghapus?</p>
                                                             <div>
-                                                                <input type="hidden" id="id2" name="id2">
+                                                                <input type="hidden" id="idLogin2" name="idLogin2">
                                                             </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -166,3 +216,28 @@
         </div>
     </div>
     <!-- Static Table End -->
+
+
+
+
+
+
+
+    <script type="text/javascript">
+    function SetInput(idLogin, nama, password, level){
+        document.getElementById('idLogin').value = idLogin;
+        document.getElementById('nama').value = nama;
+        document.getElementById('password').value = password;
+        document.getElementById('level').value = level;
+        
+    }
+    function SetInputs(idLogin, nama,  password, level){
+        
+        document.getElementById('idLogin2').value = idLogin;
+        document.getElementById('nama2').value = nama;
+        document.getElementById('password2').value = password;
+        document.getElementById('level2').value = level;
+    }
+
+   
+</script>

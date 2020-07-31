@@ -12,9 +12,10 @@ class readBerita extends CI_Controller {
 	
 
 	public function index() {
-		
-			$data['query'] = $this->m_berita->tampil_home();
-			$kategori['query'] = $this->m_kategori->tampil_home();
+		$data['id'] = $this->input->get('id');
+		$data['query'] = $this->m_berita->tampil_home($data['id']);
+			//$data['query'] = $this->m_berita->tampil_berita();
+		//	$kategori['query'] = $this->m_kategori->tampil_home();
 	
 			$this->load->view('head', $data);
 			$this->load->view('kelolaBerita/readBerita', $data);
@@ -33,3 +34,4 @@ class readBerita extends CI_Controller {
 		$this->m_berita->hapus_data($id);
 	}
 }
+

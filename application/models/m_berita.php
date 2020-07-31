@@ -4,6 +4,7 @@ class M_berita extends CI_Model{
 	//fungsi untuk tampil data pada home
 	function tampil_home(){
 		return $this->db->get('berita');   //mengambil data dari database
+	
 	} 
 	function tampil_kategori($idKategori){
 		return $this->db->query("SELECT * FROM berita ,kategori WHERE '".$idKategori."'");
@@ -22,9 +23,9 @@ class M_berita extends CI_Model{
 
 
 
-	function tampil_berita($id){
+	function tampil_berita(){
 		//return $this->db->query("SELECT * FROM berita, kategori WHERE berita.idKategori=kategori.idKategori");
-		return $this->db->query("SELECT  `judul_berita`, `isi_berita` FROM `berita` WHERE  `idLogin`= ".$id."");
+		return $this->db->query("SELECT *  FROM `berita`  WHERE id=id ");
 		
 	}
 

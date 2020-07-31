@@ -226,24 +226,20 @@
                     <h2>BERITA ONLINE</h2>
                     <ul class="nav nav-tabs custom-menu-wrap">
                         <li  ><a  href="<?php echo base_url(); ?>welcome/index" id="home">Home</a></li>
-                        <li  ><a  href="<?php echo base_url(); ?>pengguna/index" id="kP">Kelola data pengguna</a></li>
-                     <!--  <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Kategori<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
-                        <div role="menu" class="dropdown-menu animated flipInX"><?php
-                                                    $query = $this->m_kategori->tampil_home();
-                                                    foreach($query->result() as $row){
-                                                        echo "
-                                                        <a href='".base_url('tambahKategori/tampilKategori?id='.$row->idKategori)."' class='dropdown-item'>".$row->namaKategori."</a>
-                                                         ";  
-                                     }
-                                     ?>
-                                 </div>
-                        </li>-->
-                       <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"id="kB">Kelola Berita<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                        <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"id="kP">Kelola Pengguna<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                            <div role="menu" class="dropdown-menu animated flipInX">
+                             
+                                    <a href="<?php echo base_url(); ?>pengguna/index" class="dropdown-item">CreatePengguna</a>
+                                    <a href="<?php echo base_url(); ?>pengguna2/index" class="dropdown-item">ReadPengguna</a>
+                                  
+                                </div>
+                        </li>
+                                      <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"id="kB">Kelola Berita<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                             <div role="menu" class="dropdown-menu animated flipInX">
                              <!--      <a href="<?php echo base_url(); ?>tambahKategori/index" class="dropdown-item">TambahKategori</a>--> 
                                     <a href="<?php echo base_url(); ?>tambahBerita/index" class="dropdown-item">Create Berita</a>
                                     <a href="<?php echo base_url(); ?>readBerita/index" class="dropdown-item">Read Berita</a>
-                                    
+                                  
                                 </div>
                         </li>
                         <!-- <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Postingan<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
