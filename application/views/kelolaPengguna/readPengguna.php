@@ -224,17 +224,19 @@
 
 
     <script type="text/javascript">
-    function SetInput(idLogin, nama, password, level){
+    function SetInput(idLogin, nama, username, password, level){
         document.getElementById('idLogin').value = idLogin;
         document.getElementById('nama').value = nama;
+        document.getElementById('username').value = username;
         document.getElementById('password').value = password;
         document.getElementById('level').value = level;
         
     }
-    function SetInputs(idLogin, nama,  password, level){
+    function SetInputs(idLogin, nama, username,  password, level){
         
         document.getElementById('idLogin2').value = idLogin;
         document.getElementById('nama2').value = nama;
+        document.getElementById('username2').value = username;
         document.getElementById('password2').value = password;
         document.getElementById('level2').value = level;
     }

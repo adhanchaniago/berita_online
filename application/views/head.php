@@ -198,10 +198,10 @@
                                     <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                    <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
-                                    </li>
-                                    <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
-                                    </li>
+                                  <!--  <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
+                                    </li> -->
+                                  <!--  <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
+                                    </li> -->
                             <!--        <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-money author-log-ic"></span>User Billing</a>
                                     </li>
                                     <li><a href="<?php echo base_url(); ?>horizontal/#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Settings</a>

@@ -35,7 +35,7 @@ class home extends CI_Controller {
 		$data['data'] = $this->m_berita->jumlah_baca($data['id']);
 		
 		$this->load->view('home', $data);
-		$this->load->view('LanjutBaca', $data);
+		$this->load->view('home/lanjutBaca2', $data);
 		$this->load->view('footer', $data);
 	}
 
