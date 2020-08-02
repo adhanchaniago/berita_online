@@ -11,7 +11,13 @@ class M_kategori extends CI_Model{
             kategori.idKategori=berita.idKategori AND 
             berita.id='".$idKategori."'");
 
-    }
+	}
+	function tampil_kategori() {
+		return $this->db->query("SELECT * FROM berita, kategori
+		WHERE berita.idKategori=kategori.idKategori
+		AND kategori.idKategori = '5'");
+  
+	  }
     
 	
 	                              

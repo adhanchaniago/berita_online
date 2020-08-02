@@ -21,6 +21,16 @@ class readBerita extends CI_Controller {
 			$this->load->view('kelolaBerita/readBerita', $data);
 			$this->load->view('footer', $data);
 		}
+		public function index2() {
+			$data['id'] = $this->input->get('id');
+			$data['query'] = $this->m_berita->tampil_login($data['id']);
+				//$data['query'] = $this->m_berita->tampil_berita();
+			//	$kategori['query'] = $this->m_kategori->tampil_home();
+		
+				$this->load->view('head', $data);
+				$this->load->view('kelolaBerita/readBerita', $data);
+				$this->load->view('footer', $data);
+			}
 
 	public function add(){
 		$id = $this->input->post('id');

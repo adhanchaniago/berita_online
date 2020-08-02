@@ -194,7 +194,7 @@
                             <li class="nav-item">
                                 <a href="<?php echo base_url(); ?>horizontal/#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                     <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                
+                                       
                                     <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
@@ -226,6 +226,8 @@
                     <h2>BERITA ONLINE</h2>
                     <ul class="nav nav-tabs custom-menu-wrap">
                         <li  ><a  href="<?php echo base_url(); ?>welcome/index" id="home">Home</a></li>
+                          
+
                         <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"id="kP">Kelola Pengguna<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                             <div role="menu" class="dropdown-menu animated flipInX">
                              
@@ -238,11 +240,12 @@
                             <div role="menu" class="dropdown-menu animated flipInX">
                              <!--      <a href="<?php echo base_url(); ?>tambahKategori/index" class="dropdown-item">TambahKategori</a>--> 
                                     <a href="<?php echo base_url(); ?>tambahBerita/index" class="dropdown-item">Create Berita</a>
-                                    <a href="<?php echo base_url(); ?>readBerita/index" class="dropdown-item">Read Berita</a>
+                                    <a href="<?php echo base_url(); ?>readBerita/index" class="dropdown-item" id="readUntukA">Read Berita</a>
+                                    <a href="<?php echo base_url(); ?>readBerita/index2" class="dropdown-item" id="readUntukSA">Read Berita</a>
                                   
                                 </div>
                         </li>
-                        <!-- <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Postingan<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                        <!-- <li class="nav-item dropdown" ><a  href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Kategori<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                             <div role="menu" class="dropdown-menu animated flipInX">
                                     <a href="<?php echo base_url(); ?>postingan/index" class="dropdown-item">Kategori</a>
                                   <a href="<?php echo base_url(); ?>postingan/index2" class="dropdown-item">Berita</a>
@@ -266,6 +269,12 @@
    if($this->session->userdata('level') == "Admin"){
     echo"<script>
     document.getElementById('kP').style.display = 'none';
+    document.getElementById('readUntukSA').style.display = 'none';
+    
+    </script>";
+}else{
+    echo"<script>
+    document.getElementById('readUntukA').style.display = 'none';
     
     </script>";
 }

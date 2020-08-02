@@ -91,7 +91,7 @@
                                             
                                                 <label  for="inputIsiBerita">Isi Berita</label>  
                                                 <div >  
-                                                    <textarea class="form-control" rows="10" cols="150"  name="isi_berita" id="isi_berita" ></textarea>  
+                                                    <textarea type="text" class="form-control" rows="10" cols="150"  name="isi_berita" id="isi_berita" ></textarea>  
                                                 </div>  
                                             </div>  
                                             

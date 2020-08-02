@@ -13,6 +13,10 @@
 	function tampil_home(){
 		return $this->db->get('login');   //mengambil data dari database
 	} 
+	function tampil_nama(){
+		return $this->db->query("SELECT  `nama` FROM `login` WHERE idLogin  ");
+	}
+
 
 	function tambah_data(){
 		$data = array(

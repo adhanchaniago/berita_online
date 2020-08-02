@@ -31,7 +31,7 @@
                                             <p ></p>
                                             <tbody>
                                                 <?php 
-
+                                                    $query=$this->m_kategori->tampil_kategori();
                                                 foreach($query->result() as $row){
                                                 $artikel=$row->isi_berita;
                                                 $cut=substr($artikel,0,200); //kode untuk membatasi karakter saya batasi 200 karakter
