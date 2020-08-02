@@ -32,7 +32,7 @@
                                             <p ></p>
                                             <tbody>
                                                 <?php     
-                                                $query=$this->m_berita->tampil_login();                   
+                                                                  
                                                 foreach($query->result() as $row){
                                                 $artikel=$row->isi_berita;
                                                 $cut=substr($artikel,0,200); //kode untuk membatasi karakter saya batasi 200 karakter

@@ -241,7 +241,7 @@
                              <!--      <a href="<?php echo base_url(); ?>tambahKategori/index" class="dropdown-item">TambahKategori</a>--> 
                                     <a href="<?php echo base_url(); ?>tambahBerita/index" class="dropdown-item">Create Berita</a>
                                     <a href="<?php echo base_url(); ?>readBerita/index" class="dropdown-item" id="readUntukA">Read Berita</a>
-                                    <a href="<?php echo base_url(); ?>readBerita/index2" class="dropdown-item" id="readUntukSA">Read Berita</a>
+                                    <a href="<?php echo base_url(); ?>readBerita2/index" class="dropdown-item" id="readUntukSA">Read Berita</a>
                                   
                                 </div>
                         </li>

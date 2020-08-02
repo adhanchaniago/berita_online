@@ -13,7 +13,7 @@ class home extends CI_Controller {
 
 
 	public function index() {
-		$data['query'] = $this->m_berita->tampil_home();
+		$data['query'] = $this->m_berita->tampil_login();
 		$this->load->view('home', $data);
 		$this->load->view('home/beranda2', $data);
 		$this->load->view('footer', $data);

@@ -18,6 +18,7 @@ class M_berita extends CI_Model{
 
 	function tampil_login(){
 		return $this->db->query("SELECT * FROM berita, login WHERE berita.idLogin=login.idLogin");
+		
 	}
 	
 	
@@ -65,6 +66,14 @@ class M_berita extends CI_Model{
 		$this->db->delete('berita');
 		redirect('../readBerita');
 	}
+	function hapus_data2($id){
+		$this->db->where(array('id'=> $id));
+		$this->db->delete('berita');
+		redirect('../readBerita2');
+	}
+
+
+	
 
 	function ubah_data ($id){
 		$data = array(
@@ -78,6 +87,20 @@ class M_berita extends CI_Model{
 			$this->db->where(array('id'=> $id));
 			$this->db->update('berita',$data);
 			redirect('../readBerita');
+	}
+
+	function ubah_data2 ($id){
+		$data = array(
+			'idKategori' => 5,
+			'idLogin' => $this->session->userdata('id'),
+			'judul_berita' => $this->input->post('judul_berita'),
+			'isi_berita' => $this->input->post('isi_berita'),
+			
+			
+		   );
+			$this->db->where(array('id'=> $id));
+			$this->db->update('berita',$data);
+			redirect('../readBerita2');
 	}
 	
 }
