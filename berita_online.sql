@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2020 at 02:25 AM
+-- Generation Time: Aug 03, 2020 at 12:46 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -48,7 +48,11 @@ INSERT INTO `berita` (`id`, `idKategori`, `idLogin`, `judul_berita`, `isi_berita
 (61, 5, 13, 'lallalal', 'lalkkla', 0),
 (63, 5, 13, 'Berita ', 'kjxjbhbahjbajh', 0),
 (64, 5, 13, 'pk', 'Peristiwa banjir bandang akhirnya terjadi lagi. Kali ini menimpa beberapa desa di daerah sekitar kali Brantas. Banjir bandang tersebut diduga disebabkan karena intensitas hujan yang turun deras mulai jam 20.00 WIB hingga 06.00 WIB. Setidaknya sudah 2 desa yang terendam akibat kejadian ini.\r\n\r\nDiantara warga korban yang rumahnya tergenang air, sudah mulai mengungsi ke kampung sebelah. Diperkirakan karena kejadian ini ada sekitar 165 kepala keluarga terpaksa kehilangan tempat tinggalnya. Pemerintah juga sudah tanggap dengan memberikan bantuan yang diperlukan. Seperti air bersih, makanan, minuman, pakaian, serta obat-obatan.\r\n\r\n\r\nMenurut catatan, sebelumnya juga pernah terjadi banjir di wilayah ini tepatnya sekitar 3 tahun yang lalu. Namun diperkirakan, banjir bandang kali ini jauh lebih besar daripada tahun sebelumnya. Dugaan sementara, kejadian ini akibat dari masyarakat kali Brantas sendiri yang membuang sampah sembarangan di sekitaran kali Brantas.', 0),
-(65, 5, 23, 'oke', 'oke', 0);
+(65, 5, 23, 'oke', 'oke', 0),
+(66, 5, 2, 'oke', 'Sejumlah peristiwa alam seperti gempa bumi juga bisa dijadikan topik menulis teks berita. Seperti contoh di bawah ini tentang kejadian gempa bumi yang mengguncang daerah Lombok. Berikut teks berita dengan judul “Gunjangan Gempa Lombok, Mengundang Kepanikan Warga”. Lagi-lagi, bencana kembali menerpa bumi pertiwi. Kali ini gempa bumi mengguncang tanah Lombok, Nusa Tenggara Timur. Gempa berkekuatan 7 skala ritcher mampu membuat kepanikan warga. Sebagian warga Lombok langsung mengungsi ke dataran tinggi sesaat setelah pihak BMKG memberi peringatan ada potensi tsunami. Gempa 7 skala ritcher ini terjadi sekitar pukul 18.00 waktu Indonesia Tengah. Pusat gempa diperkirakan berada di jarak 20 km barat laut Lombok timur. Kedalaman gempa terukur hingga 15 kilometer. Kepanikan warga sempat bertambah saat berita potensi tsunami diturunkan serta listrik yang mati total. Contoh Teks Laporan Percobaan Dengan segala kegentingan yang terjadi mereka memutuskan mengungsi ke daerah yang lebih tinggi. Namun akhirnya, demi meredam kepanikan warga BMKG mencabut peringatan potensi tsunami. Gempa yang berkekuatan cukup tinggi itu pun berakibat pada naiknya air laut di beberapa daerah. Diantaranya daerah Bada Sumbawa serta pelabuhan Carik Lombok utara. Sementara hingga berita ini diturunkan, warga masih merasakan beberapa kali gempa susulan.', 0),
+(67, 5, 2, 'judu ljudulan', 'Sejumlah peristiwa alam seperti gempa bumi juga bisa dijadikan topik menulis teks berita. Seperti contoh di bawah ini tentang kejadian gempa bumi yang mengguncang daerah Lombok. Berikut teks berita dengan judul “Gunjangan Gempa Lombok, Mengundang Kepanikan Warga”. Lagi-lagi, bencana kembali menerpa bumi pertiwi. Kali ini gempa bumi mengguncang tanah Lombok, Nusa Tenggara Timur. Gempa berkekuatan 7 skala ritcher mampu membuat kepanikan warga. Sebagian warga Lombok langsung mengungsi ke dataran tinggi sesaat setelah pihak BMKG memberi peringatan ada potensi tsunami. Gempa 7 skala ritcher ini terjadi sekitar pukul 18.00 waktu Indonesia Tengah. Pusat gempa diperkirakan berada di jarak 20 km barat laut Lombok timur. Kedalaman gempa terukur hingga 15 kilometer. Kepanikan warga sempat bertambah saat berita potensi tsunami diturunkan serta listrik yang mati total. Contoh Teks Laporan Percobaan Dengan segala kegentingan yang terjadi mereka memutuskan mengungsi ke daerah yang lebih tinggi. Namun akhirnya, demi meredam kepanikan warga BMKG mencabut peringatan potensi tsunami. Gempa yang berkekuatan cukup tinggi itu pun berakibat pada naiknya air laut di beberapa daerah. Diantaranya daerah Bada Sumbawa serta pelabuhan Carik Lombok utara. Sementara hingga berita ini diturunkan, warga masih merasakan beberapa kali gempa susulan.	', 0),
+(68, 5, 2, 'Berita Singkat Tentang Banjir', 'Peristiwa banjir bandang akhirnya terjadi lagi. Kali ini menimpa beberapa desa di daerah sekitar kali Brantas. Banjir bandang tersebut diduga disebabkan karena intensitas hujan yang turun deras mulai jam 20.00 WIB hingga 06.00 WIB. Setidaknya sudah 2 desa yang terendam akibat kejadian ini. Diantara warga korban yang rumahnya tergenang air, sudah mulai mengungsi ke kampung sebelah. \r\nDiperkirakan karena kejadian ini ada sekitar 165 kepala keluarga terpaksa kehilangan tempat tinggalnya. Pemerintah juga sudah tanggap dengan memberikan bantuan yang diperlukan. Seperti air bersih, makanan, minuman, pakaian, serta obat-obatan. Menurut catatan, sebelumnya juga pernah terjadi banjir di wilayah ini tepatnya sekitar 3 tahun yang lalu. Namun diperkirakan, banjir bandang kali ini jauh lebih besar daripada tahun sebelumnya. Dugaan sementara, kejadian ini akibat dari masyarakat kali Brantas sendiri yang membuang sampah sembarangan di sekitaran kali Brantas.', 0),
+(69, 5, 2, 'Berita Mengenai Banjir', 'Peristiwa banjir bandang akhirnya terjadi lagi. Kali ini menimpa beberapa desa di daerah sekitar kali Brantas. Banjir bandang tersebut diduga disebabkan karena intensitas hujan yang turun deras mulai jam 20.00 WIB hingga 06.00 WIB. Setidaknya sudah 2 desa yang terendam akibat kejadian ini. Diantara warga korban yang rumahnya tergenang air, sudah mulai mengungsi ke kampung sebelah. Diperkirakan karena kejadian ini ada sekitar 165 kepala keluarga terpaksa kehilangan tempat tinggalnya. Pemerintah juga sudah tanggap dengan memberikan bantuan yang diperlukan. Seperti air bersih, makanan, minuman, pakaian, serta obat-obatan. Menurut catatan, sebelumnya juga pernah terjadi banjir di wilayah ini tepatnya sekitar 3 tahun yang lalu. Namun diperkirakan, banjir bandang kali ini jauh lebih besar daripada tahun sebelumnya. Dugaan sementara, kejadian ini akibat dari masyarakat kali Brantas sendiri yang membuang sampah sembarangan di sekitaran kali Brantas.', 0);
 
 -- --------------------------------------------------------
 
@@ -90,9 +94,10 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`idLogin`, `nama`, `username`, `password`, `level`) VALUES
 (2, 'uswatun', 'wawa', '81dc9bdb52d04dc20036dbd8313ed055', 'Admin'),
-(13, 'Uswatun Khasanah', 'ela', '698d51a19d8a121ce581499d7b701668', 'SuperAdmin'),
+(13, 'Ela', 'ela', '3049a1f0f1c808cdaa4fbed0e01649b1', 'SuperAdmin'),
 (21, 'ratna', 'ratna', 'b59c67bf196a4758191e42f76670ceba', 'SuperAdmin'),
-(23, 'qabid', 'qaqa', 'd9b1d7db4cd6e70935368a1efb10e377', 'SuperAdmin');
+(23, 'qabid', 'qaqa', 'd9b1d7db4cd6e70935368a1efb10e377', 'SuperAdmin'),
+(24, 'ayunda', 'Ayunda', 'a01610228fe998f515a72dd730294d87', 'SuperAdmin');
 
 --
 -- Indexes for dumped tables
@@ -126,7 +131,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -138,7 +143,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `idLogin` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idLogin` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
