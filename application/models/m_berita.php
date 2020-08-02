@@ -25,7 +25,10 @@ class M_berita extends CI_Model{
 
 	function tampil_berita(){
 		//return $this->db->query("SELECT * FROM berita, kategori WHERE berita.idKategori=kategori.idKategori");
-		return $this->db->query("SELECT *  FROM `berita`  WHERE id=id ");
+		//return $this->db->query("SELECT *  FROM `berita`  WHERE id=id ");
+		return $this->db->query("SELECT * FROM berita, login
+		WHERE berita.idLogin=login.idLogin
+		AND login.username = '$_SESSION[username]'	  ");
 		
 	}
 

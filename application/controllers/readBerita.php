@@ -13,7 +13,7 @@ class readBerita extends CI_Controller {
 
 	public function index() {
 		$data['id'] = $this->input->get('id');
-		$data['query'] = $this->m_berita->tampil_home($data['id']);
+		$data['query'] = $this->m_berita->tampil_berita($data['id']);
 			//$data['query'] = $this->m_berita->tampil_berita();
 		//	$kategori['query'] = $this->m_kategori->tampil_home();
 	
